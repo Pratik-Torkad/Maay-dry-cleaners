@@ -5,41 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MAAY Laundry & Dry Clean – Maharashtra's First Dry Cleaning Brand</title>
 <meta name="description" content="MAAY – Maharashtra's first dry cleaning brand. Anti-viral cleaning, purified water, eco-friendly chemicals. Free doorstep pickup & delivery in Pune.">
-<meta name="keywords" content="laundry Pune, dry cleaning Pune, doorstep laundry, MAAY laundry, dry cleaner PCMC, Rahatani laundry">
-<meta name="author" content="MAAY Laundry & Dry Clean">
-<link rel="canonical" href="https://maaydrycleaner.com/">
-<!-- Open Graph -->
-<meta property="og:title" content="MAAY Laundry & Dry Clean – Maharashtra's First Dry Cleaning Brand">
-<meta property="og:description" content="Anti-viral cleaning, purified water, eco-friendly chemicals. Free doorstep pickup & delivery in Pune.">
-<meta property="og:url" content="https://maaydrycleaner.com/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="MAAY Laundry & Dry Clean">
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MAAY Laundry & Dry Clean">
-<meta name="twitter:description" content="Maharashtra's first dry cleaning brand. Free pickup & delivery in Pune.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--sky:#e8f6fd;--blue:#1a9bd7;--blue-dark:#0e6fa3;--orange:#f47c20;--orange-light:#fde8d0;--white:#ffffff;--text:#1a2636;--muted:#6b8499;--card:#f0faff;--border:#cce8f5;--gold:#f9c542;--green:#22c55e;--red:#ef4444;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;}
+
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:2px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:64px;box-shadow:0 2px 20px rgba(26,155,215,0.08);}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;}
 .nav-logo-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue-dark));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:white;font-size:18px;font-weight:900;}
 .nav-logo-text{font-size:20px;font-weight:600;color:var(--text);}
 .nav-logo-sub{font-size:11px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;}
 .nav-links{display:flex;gap:22px;list-style:none;}
-.nav-links a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;transition:color .2s;padding:4px 0;border-bottom:2px solid transparent;}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;transition:color .2s;padding:4px 0;border-bottom:2px solid transparent;cursor:pointer;}
 .nav-links a:hover,.nav-links a.active{color:var(--blue);border-bottom-color:var(--blue);}
-.nav-cta{background:var(--orange);color:white;padding:9px 22px;border-radius:50px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:0 4px 16px rgba(244,124,32,0.35);transition:transform .2s;}
+.nav-cta{background:var(--orange);color:white;padding:9px 22px;border-radius:50px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:0 4px 16px rgba(244,124,32,0.35);transition:transform .2s;cursor:pointer;}
 .nav-cta:hover{transform:translateY(-2px);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;}
-.mobile-nav{position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;background:rgba(26,38,54,0.95);backdrop-filter:blur(8px);display:none;flex-direction:column;align-items:center;justify-content:center;gap:24px;}
+
+/* MOBILE NAV */
+.mobile-nav{position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;background:rgba(26,38,54,0.97);backdrop-filter:blur(8px);display:none;flex-direction:column;align-items:center;justify-content:center;gap:24px;}
 .mobile-nav.open{display:flex;}
-.mobile-nav a{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:white;text-decoration:none;}
+.mobile-nav a{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:white;text-decoration:none;cursor:pointer;}
 .mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;color:white;font-size:28px;cursor:pointer;}
-/* HERO */
+
+/* PAGE SYSTEM */
+.page{display:none;}
+.page.active{display:block;}
+
+/* SHARED */
+.section-label{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,40px);font-weight:900;margin-bottom:12px;}
+.section-sub{font-size:16px;color:var(--muted);margin-bottom:48px;max-width:500px;}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .5s,transform .5s;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.page-hero{padding:120px 5vw 60px;background:linear-gradient(135deg,#0e6fa3 0%,#1a2636 60%);color:white;text-align:center;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,52px);font-weight:900;margin-bottom:14px;}
+.page-hero h1 span{color:var(--gold);}
+.page-hero p{font-size:17px;color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto;}
+.page-badge{display:inline-block;background:rgba(249,197,66,0.15);border:1px solid var(--gold);color:var(--gold);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:18px;}
+
+/* HOME HERO */
 .hero{min-height:100vh;background:linear-gradient(135deg,#0e6fa3 0%,#1a2636 60%);display:flex;align-items:center;padding:80px 5vw 60px;}
 .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
 .hero-brand{display:flex;align-items:center;gap:16px;margin-bottom:28px;}
@@ -53,49 +62,147 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .hero h1 span{color:var(--gold);}
 .hero p{font-size:17px;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:36px;max-width:480px;}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
-.btn-primary{background:var(--orange);color:white;padding:14px 32px;border-radius:50px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 6px 24px rgba(244,124,32,0.4);transition:.2s;}
+.btn-primary{background:var(--orange);color:white;padding:14px 32px;border-radius:50px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 6px 24px rgba(244,124,32,0.4);transition:.2s;cursor:pointer;border:none;display:inline-block;}
 .btn-primary:hover{transform:translateY(-2px);}
-.btn-secondary{border:2px solid rgba(255,255,255,0.4);color:white;padding:13px 30px;border-radius:50px;font-size:16px;font-weight:600;text-decoration:none;transition:.2s;}
+.btn-secondary{border:2px solid rgba(255,255,255,0.4);color:white;padding:13px 30px;border-radius:50px;font-size:16px;font-weight:600;text-decoration:none;transition:.2s;cursor:pointer;display:inline-block;}
 .btn-secondary:hover{background:rgba(255,255,255,0.1);}
 .hero-stats{display:flex;gap:32px;margin-top:48px;}
-.stat{text-align:center;}
 .stat-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:var(--gold);}
 .stat-label{font-size:12px;color:rgba(255,255,255,0.55);margin-top:4px;}
 .hero-visual{background:rgba(255,255,255,0.05);border:1.5px solid rgba(255,255,255,0.12);border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:16px;}
 .service-pill{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:14px;color:white;font-size:15px;font-weight:500;}
 .service-pill span:first-child{font-size:28px;}
-/* SERVICES */
+
+/* SERVICES SECTION */
 .services{padding:80px 5vw;background:var(--sky);}
 .services-inner{max-width:1200px;margin:0 auto;}
-.section-label{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,40px);font-weight:900;margin-bottom:12px;}
-.section-sub{font-size:16px;color:var(--muted);margin-bottom:48px;max-width:500px;}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
 .service-card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:28px 20px;text-align:center;transition:.25s;cursor:pointer;}
 .service-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,155,215,0.12);border-color:var(--blue);}
 .service-card .icon{font-size:40px;margin-bottom:14px;}
 .service-card h3{font-size:16px;font-weight:700;margin-bottom:6px;}
 .service-card p{font-size:13px;color:var(--muted);}
+
 /* HOW IT WORKS */
 .how{padding:80px 5vw;}
 .how-inner{max-width:1200px;margin:0 auto;}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:48px;}
-.step{text-align:center;position:relative;}
+.step{text-align:center;}
 .step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:white;font-family:'Playfair Display',serif;font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
 .step h3{font-size:17px;font-weight:700;margin-bottom:8px;}
 .step p{font-size:14px;color:var(--muted);line-height:1.6;}
+
 /* CTA BANNER */
 .cta-banner{background:linear-gradient(135deg,var(--orange),#c85800);padding:60px 5vw;text-align:center;color:white;}
 .cta-banner h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;margin-bottom:14px;}
 .cta-banner p{font-size:17px;opacity:.85;margin-bottom:32px;}
 .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-.cta-btn-white{background:white;color:var(--orange);padding:14px 32px;border-radius:50px;font-size:16px;font-weight:700;text-decoration:none;transition:.2s;}
+.cta-btn-white{background:white;color:var(--orange);padding:14px 32px;border-radius:50px;font-size:16px;font-weight:700;text-decoration:none;transition:.2s;cursor:pointer;}
 .cta-btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2);}
-.cta-btn-outline{border:2px solid white;color:white;padding:13px 30px;border-radius:50px;font-size:16px;font-weight:700;text-decoration:none;transition:.2s;}
+.cta-btn-outline{border:2px solid white;color:white;padding:13px 30px;border-radius:50px;font-size:16px;font-weight:700;text-decoration:none;transition:.2s;cursor:pointer;}
 .cta-btn-outline:hover{background:white;color:var(--orange);}
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .5s,transform .5s;}
-.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* PRICING */
+.pricing-section{padding:60px 5vw;max-width:1200px;margin:0 auto;}
+.pricing-tabs{display:flex;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+.tab-btn{padding:10px 24px;border-radius:50px;border:2px solid var(--border);background:white;color:var(--muted);font-size:14px;font-weight:600;cursor:pointer;transition:.2s;font-family:'DM Sans',sans-serif;}
+.tab-btn.active{background:var(--blue);color:white;border-color:var(--blue);}
+.pricing-table{display:none;}
+.pricing-table.active{display:block;}
+table{width:100%;border-collapse:collapse;background:white;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(26,155,215,0.08);}
+thead{background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:white;}
+thead th{padding:16px 20px;text-align:left;font-size:14px;font-weight:700;letter-spacing:.5px;}
+tbody tr{border-bottom:1px solid var(--border);}
+tbody tr:last-child{border-bottom:none;}
+tbody tr:hover{background:var(--sky);}
+tbody td{padding:14px 20px;font-size:14px;color:var(--text);}
+tbody td:last-child{font-weight:700;color:var(--blue);}
+.price-note{background:var(--orange-light);border:1.5px solid var(--orange);border-radius:14px;padding:16px 20px;margin-top:24px;font-size:14px;color:var(--text);}
+.price-note strong{color:var(--orange);}
+
+/* PACKAGES */
+.packages-section{padding:60px 5vw;max-width:1200px;margin:0 auto;}
+.packages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;}
+.package-card{background:white;border:2px solid var(--border);border-radius:24px;padding:36px 28px;position:relative;transition:.25s;}
+.package-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(26,155,215,0.13);}
+.package-card.featured{border-color:var(--blue);box-shadow:0 8px 32px rgba(26,155,215,0.18);}
+.package-badge-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:white;padding:5px 18px;border-radius:50px;font-size:12px;font-weight:700;white-space:nowrap;}
+.package-icon{font-size:44px;margin-bottom:16px;}
+.package-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;margin-bottom:6px;}
+.package-price{font-size:32px;font-weight:900;color:var(--blue);margin-bottom:4px;}
+.package-price span{font-size:14px;font-weight:400;color:var(--muted);}
+.package-desc{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6;}
+.package-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+.package-features li{font-size:14px;display:flex;align-items:center;gap:10px;}
+.package-features li::before{content:'✓';color:var(--green);font-weight:700;font-size:16px;}
+.pkg-btn{width:100%;padding:13px;border-radius:50px;border:none;font-size:15px;font-weight:700;cursor:pointer;transition:.2s;background:var(--blue);color:white;font-family:'DM Sans',sans-serif;}
+.pkg-btn:hover{background:var(--blue-dark);}
+.package-card.featured .pkg-btn{background:var(--orange);}
+
+/* DISCOUNTS */
+.discounts-section{padding:60px 5vw;max-width:1200px;margin:0 auto;}
+.discounts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+.discount-card{background:white;border:2px solid var(--border);border-radius:20px;padding:28px;transition:.25s;position:relative;overflow:hidden;}
+.discount-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
+.discount-card.dc-orange::before{background:var(--orange);}
+.discount-card.dc-blue::before{background:var(--blue);}
+.discount-card.dc-gold::before{background:var(--gold);}
+.discount-card.dc-green::before{background:var(--green);}
+.discount-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(26,155,215,0.1);}
+.discount-pct{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:var(--blue);line-height:1;}
+.discount-pct.dp-orange{color:var(--orange);}
+.discount-pct.dp-gold{color:#c49000;}
+.discount-pct.dp-green{color:var(--green);}
+.discount-title{font-size:18px;font-weight:700;margin:8px 0 6px;}
+.discount-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:16px;}
+.discount-code{background:var(--sky);border:1.5px dashed var(--blue);border-radius:10px;padding:10px 16px;font-size:13px;font-weight:700;color:var(--blue);letter-spacing:1px;display:inline-block;}
+.discount-expiry{font-size:12px;color:var(--muted);margin-top:10px;}
+.referral-banner{background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-radius:24px;padding:40px;color:white;margin-top:40px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;}
+.referral-banner h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;margin-bottom:8px;}
+.referral-banner p{font-size:15px;opacity:.8;line-height:1.6;}
+
+/* WHY US */
+.whyus-section{padding:60px 5vw;max-width:1200px;margin:0 auto;}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:60px;}
+.feature-card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:28px;transition:.25s;}
+.feature-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(26,155,215,0.1);border-color:var(--blue);}
+.feature-icon{font-size:36px;margin-bottom:14px;}
+.feature-card h3{font-size:17px;font-weight:700;margin-bottom:8px;}
+.feature-card p{font-size:14px;color:var(--muted);line-height:1.6;}
+.testimonials{background:var(--sky);border-radius:24px;padding:48px;margin-bottom:48px;}
+.testimonials h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;margin-bottom:28px;}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+.review-card{background:white;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(26,155,215,0.07);}
+.review-stars{color:var(--gold);font-size:18px;margin-bottom:10px;}
+.review-text{font-size:14px;color:var(--text);line-height:1.6;margin-bottom:14px;font-style:italic;}
+.review-author{font-size:13px;font-weight:700;color:var(--blue);}
+.review-loc{font-size:12px;color:var(--muted);}
+.trust-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;margin-top:24px;}
+.trust-item{text-align:center;padding:24px;background:white;border:1.5px solid var(--border);border-radius:16px;}
+.trust-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--blue);}
+.trust-label{font-size:13px;color:var(--muted);margin-top:4px;}
+
+/* PICKUP */
+.pickup-section{padding:60px 5vw;max-width:900px;margin:0 auto;}
+.booking-card{background:white;border:2px solid var(--border);border-radius:24px;padding:40px;box-shadow:0 8px 32px rgba(26,155,215,0.08);}
+.booking-card h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;margin-bottom:6px;}
+.booking-card>p{font-size:14px;color:var(--muted);margin-bottom:28px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.form-group{display:flex;flex-direction:column;gap:6px;}
+.form-group.full{grid-column:1/-1;}
+label{font-size:13px;font-weight:600;color:var(--text);}
+input,select,textarea{padding:12px 16px;border:1.5px solid var(--border);border-radius:12px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--text);outline:none;transition:border .2s;background:white;}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);}
+textarea{resize:vertical;min-height:90px;}
+.submit-btn{width:100%;padding:15px;background:var(--orange);color:white;border:none;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;margin-top:8px;transition:.2s;font-family:'DM Sans',sans-serif;}
+.submit-btn:hover{background:#d4660e;transform:translateY(-2px);}
+.contact-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:32px;}
+.contact-item{background:var(--sky);border:1.5px solid var(--border);border-radius:16px;padding:20px;text-align:center;}
+.contact-item .ci-icon{font-size:28px;margin-bottom:8px;}
+.contact-item h4{font-size:14px;font-weight:700;margin-bottom:4px;}
+.contact-item a,.contact-item span{font-size:14px;color:var(--blue);text-decoration:none;font-weight:600;}
+.success-msg{display:none;background:#dcfce7;border:1.5px solid var(--green);border-radius:14px;padding:18px 20px;color:#166534;font-weight:600;margin-top:16px;text-align:center;}
+
 /* FOOTER */
 footer{background:var(--text);color:white;padding:48px 5vw 24px;}
 .footer-inner{max-width:1200px;margin:0 auto;}
@@ -107,38 +214,62 @@ footer{background:var(--text);color:white;padding:48px 5vw 24px;}
 .social-btn:hover{background:var(--blue);}
 .footer-col h4{font-size:14px;font-weight:700;margin-bottom:16px;color:white;}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.footer-col ul a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:14px;transition:color .2s;}
+.footer-col ul a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:14px;transition:color .2s;cursor:pointer;}
 .footer-col ul a:hover{color:white;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:13px;color:rgba(255,255,255,0.4);}
-@media(max-width:900px){.nav-links,.nav-cta{display:none;}.hamburger{display:flex;}.hero-inner{grid-template-columns:1fr;}.hero-visual{display:none;}.footer-top{grid-template-columns:1fr;gap:24px;}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:flex;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-visual{display:none;}
+  .footer-top{grid-template-columns:1fr;gap:24px;}
+  .form-grid{grid-template-columns:1fr;}
+  .referral-banner{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .hero-stats{gap:20px;}
+  .pricing-tabs{gap:6px;}
+  .tab-btn{padding:8px 14px;font-size:12px;}
+  .booking-card{padding:24px;}
+}
 </style>
 </head>
 <body>
+
+<!-- NAV -->
 <nav id="navbar">
-  <a href="index.html" class="nav-logo">
+  <a class="nav-logo" onclick="showPage('home')">
     <div class="nav-logo-mark">M</div>
     <div><div class="nav-logo-text">MAAY</div><div class="nav-logo-sub">Laundry · Dry Clean</div></div>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="packages.html">Packages</a></li>
-    <li><a href="discounts.html">Discounts</a></li>
-    <li><a href="why-us.html">Why Us</a></li>
-    <li><a href="pickup.html">Book Pickup</a></li>
+    <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+    <li><a onclick="showPage('pricing')" id="nav-pricing">Pricing</a></li>
+    <li><a onclick="showPage('packages')" id="nav-packages">Packages</a></li>
+    <li><a onclick="showPage('discounts')" id="nav-discounts">Discounts</a></li>
+    <li><a onclick="showPage('whyus')" id="nav-whyus">Why Us</a></li>
+    <li><a onclick="showPage('pickup')" id="nav-pickup">Book Pickup</a></li>
   </ul>
-  <a href="pickup.html" class="nav-cta">📦 Book Pickup</a>
-  <div class="hamburger" id="menuBtn" onclick="openMenu()"><span></span><span></span><span></span></div>
+  <a class="nav-cta" onclick="showPage('pickup')">📦 Book Pickup</a>
+  <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
 </nav>
+
+<!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
   <button class="mobile-close" onclick="closeMenu()">✕</button>
-  <a href="index.html" onclick="closeMenu()">🏠 Home</a>
-  <a href="pricing.html" onclick="closeMenu()">💰 Pricing</a>
-  <a href="packages.html" onclick="closeMenu()">📦 Packages</a>
-  <a href="discounts.html" onclick="closeMenu()">🏷️ Discounts</a>
-  <a href="why-us.html" onclick="closeMenu()">⭐ Why Us</a>
-  <a href="pickup.html" onclick="closeMenu()" style="color:var(--gold)">🚗 Book Pickup</a>
+  <a onclick="showPage('home');closeMenu()">🏠 Home</a>
+  <a onclick="showPage('pricing');closeMenu()">💰 Pricing</a>
+  <a onclick="showPage('packages');closeMenu()">📦 Packages</a>
+  <a onclick="showPage('discounts');closeMenu()">🏷️ Discounts</a>
+  <a onclick="showPage('whyus');closeMenu()">⭐ Why Us</a>
+  <a onclick="showPage('pickup');closeMenu()" style="color:var(--gold)">🚗 Book Pickup</a>
 </div>
+
+
+<!-- ==================== PAGE: HOME ==================== -->
+<div id="page-home" class="page active">
 
 <section class="hero">
   <div class="hero-inner">
@@ -155,21 +286,21 @@ footer{background:var(--text);color:white;padding:48px 5vw 24px;}
       <h1>Premium Laundry &amp; <span>Dry Cleaning</span> at Your Door</h1>
       <p>Anti-viral cleaning, purified water, eco-friendly chemicals — professional garment care delivered free to your doorstep in Pune.</p>
       <div class="hero-btns">
-        <a href="pickup.html" class="btn-primary">📦 Book Free Pickup</a>
-        <a href="pricing.html" class="btn-secondary">💰 View Pricing</a>
+        <a class="btn-primary" onclick="showPage('pickup')">📦 Book Free Pickup</a>
+        <a class="btn-secondary" onclick="showPage('pricing')">💰 View Pricing</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Happy Customers</div></div>
-        <div class="stat"><div class="stat-num">3</div><div class="stat-label">Viruses Eliminated</div></div>
-        <div class="stat"><div class="stat-num">20%</div><div class="stat-label">First Order Off</div></div>
+        <div><div class="stat-num">500+</div><div class="stat-label">Happy Customers</div></div>
+        <div><div class="stat-num">3</div><div class="stat-label">Viruses Eliminated</div></div>
+        <div><div class="stat-num">20%</div><div class="stat-label">New Customer Off</div></div>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="service-pill"><span>👔</span><span>Shirts & Formal Wear</span></div>
-      <div class="service-pill"><span>👗</span><span>Sarees & Bridal Wear</span></div>
-      <div class="service-pill"><span>🧥</span><span>Jackets & Woollens</span></div>
-      <div class="service-pill"><span>👟</span><span>Shoes & Bags</span></div>
-      <div class="service-pill"><span>🛏️</span><span>Blankets & Curtains</span></div>
+      <div class="service-pill"><span>👔</span><span>Shirts &amp; Formal Wear</span></div>
+      <div class="service-pill"><span>👗</span><span>Sarees &amp; Bridal Wear</span></div>
+      <div class="service-pill"><span>🧥</span><span>Jackets &amp; Woollens</span></div>
+      <div class="service-pill"><span>👟</span><span>Shoes &amp; Bags</span></div>
+      <div class="service-pill"><span>🛏️</span><span>Blankets &amp; Curtains</span></div>
       <div class="service-pill"><span>⛑️</span><span>Helmet Cleaning</span></div>
     </div>
   </div>
@@ -181,12 +312,12 @@ footer{background:var(--text);color:white;padding:48px 5vw 24px;}
     <div class="section-title">All Your Garment Care Needs</div>
     <p class="section-sub">From everyday clothes to delicate bridal wear — we handle it all with expert care.</p>
     <div class="services-grid">
-      <div class="service-card"><div class="icon">👔</div><h3>Dry Cleaning</h3><p>Shirts, suits, sarees, lehengas</p></div>
-      <div class="service-card"><div class="icon">🧺</div><h3>Laundry</h3><p>Wash, dry & fold service</p></div>
-      <div class="service-card"><div class="icon">🔥</div><h3>Steam Ironing</h3><p>Professional press & finish</p></div>
-      <div class="service-card"><div class="icon">👟</div><h3>Shoe Cleaning</h3><p>Sneakers, leather, heels</p></div>
-      <div class="service-card"><div class="icon">👜</div><h3>Bag Cleaning</h3><p>Handbags, backpacks, purses</p></div>
-      <div class="service-card"><div class="icon">🛏️</div><h3>Home Textiles</h3><p>Blankets, curtains, bedsheets</p></div>
+      <div class="service-card" onclick="showPage('pricing')"><div class="icon">👔</div><h3>Dry Cleaning</h3><p>Shirts, suits, sarees, lehengas</p></div>
+      <div class="service-card" onclick="showPage('pricing')"><div class="icon">🧺</div><h3>Laundry</h3><p>Wash, dry &amp; fold service</p></div>
+      <div class="service-card" onclick="showPage('pricing')"><div class="icon">🔥</div><h3>Steam Ironing</h3><p>Professional press &amp; finish</p></div>
+      <div class="service-card" onclick="showPage('pricing')"><div class="icon">👟</div><h3>Shoe Cleaning</h3><p>Sneakers, leather, heels</p></div>
+      <div class="service-card" onclick="showPage('pricing')"><div class="icon">👜</div><h3>Bag Cleaning</h3><p>Handbags, backpacks, purses</p></div>
+      <div class="service-card" onclick="showPage('pricing')"><div class="icon">🛏️</div><h3>Home Textiles</h3><p>Blankets, curtains, bedsheets</p></div>
     </div>
   </div>
 </section>
@@ -196,21 +327,9 @@ footer{background:var(--text);color:white;padding:48px 5vw 24px;}
     <div class="section-label">How It Works</div>
     <div class="section-title">3 Simple Steps</div>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Book a Pickup</h3>
-        <p>Call, WhatsApp, or fill the form. Choose your time slot — we come to you.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>We Clean</h3>
-        <p>Your clothes are cleaned with purified water, eco-friendly chemicals & anti-viral treatment.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Free Delivery</h3>
-        <p>Fresh, folded, and delivered back to your door. Track via WhatsApp updates.</p>
-      </div>
+      <div class="step"><div class="step-num">1</div><h3>Book a Pickup</h3><p>Call, WhatsApp, or fill the form. Choose your time slot — we come to you.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>We Clean</h3><p>Cleaned with purified water, eco-friendly chemicals &amp; anti-viral treatment.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Free Delivery</h3><p>Fresh, folded, and delivered back to your door. Track via WhatsApp updates.</p></div>
     </div>
   </div>
 </section>
@@ -219,28 +338,527 @@ footer{background:var(--text);color:white;padding:48px 5vw 24px;}
   <h2>Get 20% Off Your First Order!</h2>
   <p>Book today and experience Maharashtra's finest laundry service.</p>
   <div class="cta-btns">
-    <a href="pickup.html" class="cta-btn-white">📦 Book Free Pickup</a>
+    <a class="cta-btn-white" onclick="showPage('pickup')">📦 Book Free Pickup</a>
     <a href="tel:7387414882" class="cta-btn-outline">📞 Call Now</a>
   </div>
 </div>
 
+</div><!-- /page-home -->
+
+
+<!-- ==================== PAGE: PRICING ==================== -->
+<div id="page-pricing" class="page">
+
+<div class="page-hero">
+  <div class="page-badge">💰 TRANSPARENT PRICING</div>
+  <h1>Simple, <span>Honest</span> Pricing</h1>
+  <p>No hidden charges. What you see is what you pay. All prices include free pickup &amp; delivery.</p>
+</div>
+
+<div class="pricing-section">
+  <div class="pricing-tabs">
+    <button class="tab-btn active" onclick="switchTab(event,'dry')">👔 Dry Cleaning</button>
+    <button class="tab-btn" onclick="switchTab(event,'laundry')">🧺 Laundry</button>
+    <button class="tab-btn" onclick="switchTab(event,'ironing')">🔥 Ironing</button>
+    <button class="tab-btn" onclick="switchTab(event,'shoes')">👟 Shoes &amp; Bags</button>
+    <button class="tab-btn" onclick="switchTab(event,'hometex')">🛏️ Home Textiles</button>
+  </div>
+
+  <!-- Quick Rate Banner -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;">
+    <div style="background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-radius:18px;padding:24px;text-align:center;color:white;">
+      <div style="font-size:13px;font-weight:600;opacity:.8;margin-bottom:6px;">🧺 WASH &amp; FOLD</div>
+      <div style="font-family:'Playfair Display',serif;font-size:40px;font-weight:900;">₹80<span style="font-size:16px;font-weight:400;">/kg</span></div>
+    </div>
+    <div style="background:linear-gradient(135deg,var(--orange),#c85800);border-radius:18px;padding:24px;text-align:center;color:white;">
+      <div style="font-size:13px;font-weight:600;opacity:.8;margin-bottom:6px;">🔥 WASH &amp; STEAM IRON</div>
+      <div style="font-family:'Playfair Display',serif;font-size:40px;font-weight:900;">₹110<span style="font-size:16px;font-weight:400;">/kg</span></div>
+    </div>
+  </div>
+
+  <div class="pricing-table active" id="tab-dry">
+    <table><thead><tr><th>Item</th><th>Service</th><th>Price</th></tr></thead><tbody>
+      <tr><td>Shirt / T-Shirt</td><td>Dry Clean</td><td>₹80+</td></tr>
+      <tr><td>White Shirt</td><td>Dry Clean</td><td>₹100+</td></tr>
+      <tr><td>Trouser / Jeans</td><td>Dry Clean</td><td>₹100+</td></tr>
+      <tr><td>Coat</td><td>Dry Clean</td><td>₹250+</td></tr>
+      <tr><td>Suit</td><td>Dry Clean</td><td>₹300+</td></tr>
+      <tr><td>Jacket</td><td>Dry Clean</td><td>₹250+</td></tr>
+      <tr><td>Salwar Kameez</td><td>Dry Clean</td><td>₹80+</td></tr>
+      <tr><td>Kurta</td><td>Dry Clean</td><td>₹100+</td></tr>
+      <tr><td>Saree</td><td>Dry Clean</td><td>₹250+</td></tr>
+      <tr><td>Saree Blouse</td><td>Dry Clean</td><td>₹300+</td></tr>
+      <tr><td>Dress</td><td>Dry Clean</td><td>₹200+</td></tr>
+      <tr><td>Lehenga</td><td>Dry Clean</td><td>₹350+</td></tr>
+      <tr><td>Soft Toy</td><td>Clean</td><td>₹120+</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="pricing-table" id="tab-laundry">
+    <table><thead><tr><th>Service</th><th>Details</th><th>Price</th></tr></thead><tbody>
+      <tr><td>Wash &amp; Fold</td><td>Per Kg</td><td>₹80/kg</td></tr>
+      <tr><td>Wash &amp; Steam Iron</td><td>Per Kg</td><td>₹110/kg</td></tr>
+    </tbody></table>
+    <div class="price-note" style="margin-top:16px;">
+      <strong>📦 Super Saver Packages:</strong> Recharge ₹4500 → <strong>30% off</strong> (Save ₹1350) &nbsp;|&nbsp; Recharge ₹2500 → <strong>20% off</strong> (Save ₹500) &nbsp;|&nbsp; Recharge ₹1900 → <strong>20% off</strong> (Save ₹380)
+    </div>
+  </div>
+
+  <div class="pricing-table" id="tab-ironing">
+    <table><thead><tr><th>Service</th><th>Details</th><th>Price</th></tr></thead><tbody>
+      <tr><td>Wash &amp; Steam Iron</td><td>Per Kg — All garment types</td><td>₹110/kg</td></tr>
+    </tbody></table>
+    <div class="price-note" style="margin-top:16px;"><strong>ℹ️ Note:</strong> Steam ironing is included in our Wash &amp; Steam Iron per-kg service. Professional cuff &amp; collar deep cleaning included for shirts.</div>
+  </div>
+
+  <div class="pricing-table" id="tab-shoes">
+    <table><thead><tr><th>Item</th><th>Service</th><th>Price</th></tr></thead><tbody>
+      <tr><td>Sports Shoes</td><td>Deep Clean</td><td>₹250+</td></tr>
+      <tr><td>Sneakers</td><td>Deep Clean</td><td>₹250+</td></tr>
+      <tr><td>Canvas Shoes</td><td>Clean</td><td>₹220+</td></tr>
+      <tr><td>Leather Shoes</td><td>Clean + Polish</td><td>₹300+</td></tr>
+      <tr><td>Suede Leather Shoes</td><td>Specialist Clean</td><td>₹400+</td></tr>
+      <tr><td>Boots</td><td>Deep Clean</td><td>₹450+</td></tr>
+      <tr><td>Helmet</td><td>Anti-viral Clean</td><td>₹120+</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="pricing-table" id="tab-hometex">
+    <table><thead><tr><th>Item</th><th>Service</th><th>Price</th></tr></thead><tbody>
+      <tr><td>Single Blanket</td><td>Wash + Dry</td><td>₹350+</td></tr>
+      <tr><td>Double Blanket</td><td>Wash + Dry</td><td>₹450+</td></tr>
+      <tr><td>Bedsheet</td><td>Wash + Dry</td><td>₹100+</td></tr>
+      <tr><td>Curtain (per panel)</td><td>Wash + Dry</td><td>₹100+</td></tr>
+      <tr><td>Quilt / Razai</td><td>Wash + Dry</td><td>₹300+</td></tr>
+      <tr><td>Sofa Cover</td><td>Wash + Dry</td><td>₹150+</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="price-note">
+    <strong>📌 Note:</strong> Prices may vary based on fabric composition, garment size, and treatment required. &nbsp;|&nbsp; <strong>🎉 New Customer:</strong> 20% off first order — mention while booking!
+  </div>
+</div>
+
+<div class="cta-banner">
+  <h2>Ready to Book?</h2>
+  <p>Schedule your free pickup in under 2 minutes.</p>
+  <div class="cta-btns">
+    <a class="cta-btn-white" onclick="showPage('pickup')">📦 Book Free Pickup</a>
+    <a href="tel:7387414882" class="cta-btn-outline">📞 Call Now</a>
+  </div>
+</div>
+
+</div><!-- /page-pricing -->
+
+
+<!-- ==================== PAGE: PACKAGES ==================== -->
+<div id="page-packages" class="page">
+
+<div class="page-hero">
+  <div class="page-badge">📦 SUPER SAVER PACKAGES</div>
+  <h1>Recharge &amp; <span>Save More</span></h1>
+  <p>Regular laundry customer? Recharge your MAAY wallet and enjoy big savings on every wash.</p>
+</div>
+
+<div class="packages-section">
+  <div class="section-label">Super Saver Plans</div>
+  <div class="section-title">Choose Your Recharge</div>
+  <p class="section-sub">Recharge once, use anytime. The more you recharge, the more you save — order via WhatsApp.</p>
+  <div class="packages-grid">
+    <div class="package-card">
+      <div class="package-icon">💰</div>
+      <div class="package-name">Saver Plan</div>
+      <div class="package-price">₹1,900 <span>recharge</span></div>
+      <div class="package-desc">Great starting plan for regular laundry customers.</div>
+      <ul class="package-features">
+        <li>Recharge ₹1,900</li>
+        <li>Get <strong>20% OFF</strong> on all orders</li>
+        <li>Save ₹380 instantly</li>
+        <li>Valid on Wash &amp; Fold / Steam Iron</li>
+        <li>Free doorstep pickup &amp; delivery</li>
+        <li>Order via WhatsApp anytime</li>
+      </ul>
+      <button class="pkg-btn" onclick="showPage('pickup')">Recharge Now</button>
+    </div>
+    <div class="package-card featured">
+      <div class="package-badge-tag">⭐ Best Value</div>
+      <div class="package-icon">🏆</div>
+      <div class="package-name">Super Saver</div>
+      <div class="package-price">₹2,500 <span>recharge</span></div>
+      <div class="package-desc">Most popular plan for families with regular laundry needs.</div>
+      <ul class="package-features">
+        <li>Recharge ₹2,500</li>
+        <li>Get <strong>20% OFF</strong> on all orders</li>
+        <li>Save ₹500 instantly</li>
+        <li>Valid on all services</li>
+        <li>Free doorstep pickup &amp; delivery</li>
+        <li>Priority WhatsApp support</li>
+        <li>Order via WhatsApp anytime</li>
+      </ul>
+      <button class="pkg-btn" onclick="showPage('pickup')">Recharge Now</button>
+    </div>
+    <div class="package-card">
+      <div class="package-icon">👑</div>
+      <div class="package-name">Mega Saver</div>
+      <div class="package-price">₹4,500 <span>recharge</span></div>
+      <div class="package-desc">Maximum savings for large families or frequent customers.</div>
+      <ul class="package-features">
+        <li>Recharge ₹4,500</li>
+        <li>Get <strong>30% OFF</strong> on all orders</li>
+        <li>Save ₹1,350 instantly</li>
+        <li>Valid on all services</li>
+        <li>Free doorstep pickup &amp; delivery</li>
+        <li>Dedicated WhatsApp support</li>
+        <li>Priority express service</li>
+      </ul>
+      <button class="pkg-btn" onclick="showPage('pickup')">Recharge Now</button>
+    </div>
+  </div>
+
+  <!-- Savings Visual -->
+  <div style="background:var(--sky);border:2px solid var(--border);border-radius:20px;padding:32px;margin-top:40px;text-align:center;">
+    <div class="section-label" style="margin-bottom:6px;">Regular Laundry?</div>
+    <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:900;margin-bottom:8px;">Choose Our Super Saver Packages</div>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:24px;">Order via WhatsApp — quick, easy, and tracked every step of the way.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;">
+      <div style="background:white;border-radius:14px;padding:20px;border:1.5px solid var(--border);">
+        <div style="font-size:28px;font-weight:900;color:var(--orange);font-family:'Playfair Display',serif;">₹1,900</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px;">Recharge → <strong style="color:var(--green);">20% off</strong></div>
+        <div style="font-size:12px;color:var(--muted);">Save ₹380/-</div>
+      </div>
+      <div style="background:white;border-radius:14px;padding:20px;border:1.5px solid var(--border);">
+        <div style="font-size:28px;font-weight:900;color:var(--orange);font-family:'Playfair Display',serif;">₹2,500</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px;">Recharge → <strong style="color:var(--green);">20% off</strong></div>
+        <div style="font-size:12px;color:var(--muted);">Save ₹500/-</div>
+      </div>
+      <div style="background:white;border-radius:14px;padding:20px;border:2px solid var(--blue);">
+        <div style="font-size:28px;font-weight:900;color:var(--blue);font-family:'Playfair Display',serif;">₹4,500</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px;">Recharge → <strong style="color:var(--green);">30% off</strong></div>
+        <div style="font-size:12px;color:var(--muted);">Save ₹1,350/-</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:56px;">
+    <div class="section-label">Special Occasions</div>
+    <div class="section-title">One-Time Packages</div>
+    <p class="section-sub">Wedding season? Moving homes? We've got you covered.</p>
+    <div class="packages-grid">
+      <div class="package-card">
+        <div class="package-icon">💍</div>
+        <div class="package-name">Bridal Package</div>
+        <div class="package-price">₹2,499 <span>/ order</span></div>
+        <div class="package-desc">Complete bridal wardrobe care before your big day.</div>
+        <ul class="package-features">
+          <li>Lehenga / Saree dry clean</li>
+          <li>Up to 20 garments</li>
+          <li>Express 24-hr service</li>
+          <li>Steam press &amp; fold</li>
+          <li>Anti-viral treatment</li>
+        </ul>
+        <button class="pkg-btn" onclick="showPage('pickup')">Book Now</button>
+      </div>
+      <div class="package-card">
+        <div class="package-icon">🏡</div>
+        <div class="package-name">Home Reset</div>
+        <div class="package-price">₹1,299 <span>/ order</span></div>
+        <div class="package-desc">Full home textile refresh — blankets, curtains, bedsheets &amp; more.</div>
+        <ul class="package-features">
+          <li>Up to 5 blankets / quilts</li>
+          <li>Up to 10 curtain panels</li>
+          <li>All bedsheets (1 set)</li>
+          <li>Sofa covers included</li>
+          <li>Free pickup &amp; delivery</li>
+        </ul>
+        <button class="pkg-btn" onclick="showPage('pickup')">Book Now</button>
+      </div>
+      <div class="package-card">
+        <div class="package-icon">💼</div>
+        <div class="package-name">Corporate Pack</div>
+        <div class="package-price">₹3,999 <span>/ month</span></div>
+        <div class="package-desc">For offices &amp; businesses — uniforms, formal wear, bulk orders.</div>
+        <ul class="package-features">
+          <li>Up to 100 garments/month</li>
+          <li>Uniform dry clean &amp; press</li>
+          <li>Weekly pickup schedule</li>
+          <li>Dedicated account manager</li>
+          <li>GST invoice provided</li>
+        </ul>
+        <button class="pkg-btn" onclick="showPage('pickup')">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <h2>Not Sure Which Plan?</h2>
+  <p>Call us and we'll help you choose the right package for your family.</p>
+  <div class="cta-btns">
+    <a href="tel:7387414882" class="cta-btn-white">📞 Call 7387414882</a>
+    <a href="https://wa.me/917387414882" class="cta-btn-outline">💬 WhatsApp Us</a>
+  </div>
+</div>
+
+</div><!-- /page-packages -->
+
+
+<!-- ==================== PAGE: DISCOUNTS ==================== -->
+<div id="page-discounts" class="page">
+
+<div class="page-hero">
+  <div class="page-badge">🏷️ OFFERS &amp; DISCOUNTS</div>
+  <h1>Save More on <span>Every Wash</span></h1>
+  <p>Exclusive deals, referral bonuses, and seasonal offers — always something to save on at MAAY.</p>
+</div>
+
+<div class="discounts-section">
+  <div class="section-label">Current Offers</div>
+  <div class="section-title">Active Discounts</div>
+  <p class="section-sub">All discounts apply at checkout or mention the promo code while booking.</p>
+  <div class="discounts-grid">
+    <div class="discount-card dc-orange">
+      <div class="discount-pct dp-orange">20%</div>
+      <div class="discount-title">First Order Discount</div>
+      <div class="discount-desc">Brand new to MAAY? Welcome! Get 20% off your very first order — no minimum order required.</div>
+      <div class="discount-code">MAAY20</div>
+      <div class="discount-expiry">✅ No expiry — valid for all new customers</div>
+    </div>
+    <div class="discount-card dc-blue">
+      <div class="discount-pct">15%</div>
+      <div class="discount-title">Monthly Package Discount</div>
+      <div class="discount-desc">Subscribe to any monthly package and save 15% compared to per-item pricing. Cancel anytime.</div>
+      <div class="discount-code">AUTO-APPLIED</div>
+      <div class="discount-expiry">✅ Ongoing offer for all package subscribers</div>
+    </div>
+    <div class="discount-card dc-gold">
+      <div class="discount-pct dp-gold">₹100</div>
+      <div class="discount-title">Refer a Friend</div>
+      <div class="discount-desc">Refer a friend and earn ₹100 credit when they place their first order. Your friend gets ₹50 off too!</div>
+      <div class="discount-code">Share your number</div>
+      <div class="discount-expiry">✅ Unlimited referrals — no cap on earnings</div>
+    </div>
+    <div class="discount-card dc-green">
+      <div class="discount-pct dp-green">10%</div>
+      <div class="discount-title">Senior Citizen Discount</div>
+      <div class="discount-desc">Customers aged 60 and above receive a flat 10% discount on every order, always.</div>
+      <div class="discount-code">SENIOR10</div>
+      <div class="discount-expiry">✅ Permanent discount — mention at booking</div>
+    </div>
+    <div class="discount-card dc-orange">
+      <div class="discount-pct dp-orange">Free</div>
+      <div class="discount-title">Free Pickup &amp; Delivery</div>
+      <div class="discount-desc">All orders above ₹299 include completely free doorstep pickup and delivery. No charges ever.</div>
+      <div class="discount-code">AUTO-APPLIED</div>
+      <div class="discount-expiry">✅ On all orders above ₹299</div>
+    </div>
+    <div class="discount-card dc-blue">
+      <div class="discount-pct">25%</div>
+      <div class="discount-title">Festive Season Offer</div>
+      <div class="discount-desc">Special discounts during Diwali, Navratri, Eid &amp; Holi. Refresh your festive wardrobe at great prices!</div>
+      <div class="discount-code">FESTIVE25</div>
+      <div class="discount-expiry">🗓️ Valid during festive periods — watch our WhatsApp</div>
+    </div>
+  </div>
+
+  <div class="referral-banner">
+    <div>
+      <h3>🤝 Earn with Every Referral</h3>
+      <p>Share MAAY with friends &amp; family. For every friend who orders, you get ₹100 added to your account — and they get ₹50 off their first wash. No limit on how much you can earn!</p>
+    </div>
+    <a class="btn-primary" href="https://wa.me/917387414882?text=I%20want%20to%20refer%20a%20friend%20to%20MAAY">💬 Share on WhatsApp</a>
+  </div>
+
+  <div style="margin-top:56px;">
+    <div class="section-label">How to Redeem</div>
+    <div class="section-title">Using Your Discount</div>
+    <div class="steps" style="margin-top:24px;">
+      <div class="step"><div class="step-num">1</div><h3>Book Your Pickup</h3><p>Call, WhatsApp, or fill out the booking form on the Book Pickup page.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Mention the Code</h3><p>Tell our team your promo code or mention the offer when booking. It's that easy.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Discount Applied</h3><p>The discount is applied to your final bill at delivery. Pay only the discounted amount.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <h2>Don't Miss Out — Book Today!</h2>
+  <p>Use code MAAY20 and get 20% off your first order.</p>
+  <div class="cta-btns">
+    <a class="cta-btn-white" onclick="showPage('pickup')">📦 Book Free Pickup</a>
+    <a href="tel:7387414882" class="cta-btn-outline">📞 Call Now</a>
+  </div>
+</div>
+
+</div><!-- /page-discounts -->
+
+
+<!-- ==================== PAGE: WHY US ==================== -->
+<div id="page-whyus" class="page">
+
+<div class="page-hero">
+  <div class="page-badge">⭐ WHY CHOOSE MAAY</div>
+  <h1>Maharashtra's <span>Most Trusted</span> Laundry</h1>
+  <p>We're not just another laundry service. We're Maharashtra's first dedicated dry cleaning brand — built on quality, hygiene, and trust.</p>
+</div>
+
+<div class="whyus-section">
+  <div class="section-label">Our Advantages</div>
+  <div class="section-title">What Makes Us Different</div>
+  <p class="section-sub">Every detail matters when it comes to your clothes. Here's what sets MAAY apart.</p>
+  <div class="features-grid">
+    <div class="feature-card"><div class="feature-icon">🦠</div><h3>Anti-Viral Cleaning</h3><p>Get rid of <strong>THREE MAJOR viruses</strong> in just 1 cleaning! Our treatment eliminates <strong>Alien Viruses, Organic Fungus &amp; Textile Bacteria</strong> — your clothes come back not just clean, but genuinely safe for your family.</p></div>
+    <div class="feature-card"><div class="feature-icon">💧</div><h3>Purified Water</h3><p>We use RO-purified water in all laundry processes. No minerals, no impurities — fabrics are treated gently and come out softer, brighter, and longer-lasting.</p></div>
+    <div class="feature-card"><div class="feature-icon">🌿</div><h3>Eco-Friendly Chemicals</h3><p>All our cleaning agents are biodegradable and skin-safe — safe for children's clothes and sensitive skin. No harsh solvents that damage fabric fibres.</p></div>
+    <div class="feature-card"><div class="feature-icon">🚗</div><h3>Free Doorstep Service</h3><p>We pick up from your door and deliver back — completely free on orders above ₹299. No travel, no queues, no heavy bags. We come to you.</p></div>
+    <div class="feature-card"><div class="feature-icon">⏱️</div><h3>48-Hour Turnaround</h3><p>Most orders are ready in 48 hours. Need it faster? Our express service delivers in 24 hours. We respect your time as much as your clothes.</p></div>
+    <div class="feature-card"><div class="feature-icon">💬</div><h3>WhatsApp Tracking</h3><p>Real-time updates via WhatsApp — pickup confirmed, cleaning in progress, out for delivery. Full transparency at every step of your order.</p></div>
+    <div class="feature-card"><div class="feature-icon">👨‍🔬</div><h3>Expert Garment Care</h3><p>Our trained professionals inspect every garment before cleaning — identifying fabric type, stain nature, and the best treatment. No generic washing for delicate pieces.</p></div>
+    <div class="feature-card"><div class="feature-icon">🏆</div><h3>Maharashtra's First</h3><p>We pioneered professional dry cleaning in Maharashtra, bringing international standards to Pune. Trusted by 500+ happy customers across PCMC &amp; Pune city.</p></div>
+    <div class="feature-card"><div class="feature-icon">💰</div><h3>Transparent Pricing</h3><p>No hidden charges, no surprise fees. Our pricing page shows every item with its exact cost. What you see is exactly what you pay — guaranteed.</p></div>
+  </div>
+
+  <div class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"My silk sarees have never looked better. The dry cleaning quality is exceptional and the pickup was right on time. Highly recommend MAAY!"</div>
+        <div class="review-author">Priya Sharma</div><div class="review-loc">📍 Rahatani, Pune</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Subscribed to the Standard plan and it's been a game changer. No more laundry stress on weekends. The WhatsApp updates are super helpful!"</div>
+        <div class="review-author">Rahul Deshmukh</div><div class="review-loc">📍 Wakad, PCMC</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Got my bridal lehenga dry cleaned before the wedding. Zero damage, zero shrinkage, delivered in just 24 hours. Amazing service!"</div>
+        <div class="review-author">Anjali Patil</div><div class="review-loc">📍 Pimpri, PCMC</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-text">"Shoes came back looking brand new! The anti-viral treatment gives real confidence. Staff is very professional and polite. Will keep using MAAY."</div>
+        <div class="review-author">Suresh Kadam</div><div class="review-loc">📍 Chinchwad, Pune</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">By The Numbers</div>
+  <div class="section-title">Our Track Record</div>
+  <div class="trust-strip">
+    <div class="trust-item"><div class="trust-num">500+</div><div class="trust-label">Happy Customers</div></div>
+    <div class="trust-item"><div class="trust-num">3</div><div class="trust-label">Viruses Eliminated Per Wash</div></div>
+    <div class="trust-item"><div class="trust-num">48hr</div><div class="trust-label">Avg Turnaround</div></div>
+    <div class="trust-item"><div class="trust-num">100%</div><div class="trust-label">Free Pickup &amp; Delivery</div></div>
+    <div class="trust-item"><div class="trust-num">4.9★</div><div class="trust-label">Average Rating</div></div>
+    <div class="trust-item"><div class="trust-num">₹0</div><div class="trust-label">Hidden Charges</div></div>
+  </div>
+
+  <!-- Established + Trust Badges from pamphlet -->
+  <div style="margin-top:48px;background:var(--sky);border-radius:20px;padding:36px;text-align:center;">
+    <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:var(--blue);text-transform:uppercase;margin-bottom:8px;">🏢 Established 2025</div>
+    <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;margin-bottom:24px;">Driven By Care. Defined By Quality.</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;">
+      <div style="background:white;border-radius:14px;padding:16px;border:1.5px solid var(--border);">🖥️<br><strong style="font-size:13px;">Modern Machines</strong></div>
+      <div style="background:white;border-radius:14px;padding:16px;border:1.5px solid var(--border);">👨‍💼<br><strong style="font-size:13px;">Trained &amp; Professional Staff</strong></div>
+      <div style="background:white;border-radius:14px;padding:16px;border:1.5px solid var(--border);">🚚<br><strong style="font-size:13px;">Timely Service</strong></div>
+      <div style="background:white;border-radius:14px;padding:16px;border:1.5px solid var(--border);">💧<br><strong style="font-size:13px;">Filter / Purified Water</strong></div>
+      <div style="background:white;border-radius:14px;padding:16px;border:1.5px solid var(--border);">⚙️<br><strong style="font-size:13px;">Advanced Technology</strong></div>
+      <div style="background:white;border-radius:14px;padding:16px;border:1.5px solid var(--border);">🌿<br><strong style="font-size:13px;">Eco-Friendly Detergent</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <h2>Experience the MAAY Difference</h2>
+  <p>Join 500+ happy customers. Book your first order and get 20% off!</p>
+  <div class="cta-btns">
+    <a class="cta-btn-white" onclick="showPage('pickup')">📦 Book Free Pickup</a>
+    <a class="cta-btn-outline" onclick="showPage('pricing')">💰 View Pricing</a>
+  </div>
+</div>
+
+</div><!-- /page-whyus -->
+
+
+<!-- ==================== PAGE: BOOK PICKUP ==================== -->
+<div id="page-pickup" class="page">
+
+<div class="page-hero">
+  <div class="page-badge">🚗 FREE DOORSTEP PICKUP</div>
+  <h1>Book Your <span>Free Pickup</span></h1>
+  <p>Fill the form below or WhatsApp / call us directly. We'll confirm your slot within 30 minutes.</p>
+</div>
+
+<div class="pickup-section">
+  <div class="booking-card">
+    <h2>📋 Pickup Booking Form</h2>
+    <p>We'll contact you within 30 minutes to confirm your pickup time slot.</p>
+    <div class="form-grid">
+      <div class="form-group"><label>Full Name *</label><input type="text" id="f-name" placeholder="Your full name"></div>
+      <div class="form-group"><label>Mobile Number *</label><input type="tel" id="f-phone" placeholder="10-digit mobile number"></div>
+      <div class="form-group full"><label>Full Address *</label><input type="text" id="f-address" placeholder="Flat no., Building, Street, Area, Pune"></div>
+      <div class="form-group"><label>Preferred Pickup Date *</label><input type="date" id="f-date"></div>
+      <div class="form-group"><label>Preferred Time Slot *</label>
+        <select id="f-slot">
+          <option value="">Select time slot</option>
+          <option>9:00 AM – 11:00 AM</option>
+          <option>11:00 AM – 1:00 PM</option>
+          <option>2:00 PM – 4:00 PM</option>
+          <option>4:00 PM – 6:00 PM</option>
+          <option>6:00 PM – 8:00 PM</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Service Required *</label>
+        <select id="f-service">
+          <option value="">Select service</option>
+          <option>Dry Cleaning</option>
+          <option>Laundry (Wash &amp; Fold)</option>
+          <option>Steam Ironing</option>
+          <option>Shoe / Bag Cleaning</option>
+          <option>Home Textiles</option>
+          <option>Monthly Package</option>
+          <option>Multiple Services</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Promo Code (if any)</label><input type="text" id="f-promo" placeholder="e.g. MAAY20"></div>
+      <div class="form-group full"><label>Special Instructions</label><textarea id="f-notes" placeholder="Any specific garments, stains to mention, or special requests..."></textarea></div>
+    </div>
+    <button class="submit-btn" onclick="submitBooking()">📦 Confirm Pickup Booking</button>
+    <div class="success-msg" id="successMsg">🎉 Booking received! We'll call/WhatsApp you within 30 minutes to confirm your slot. Thank you for choosing MAAY!</div>
+  </div>
+
+  <div class="contact-strip">
+    <div class="contact-item"><div class="ci-icon">📞</div><h4>Call Us</h4><a href="tel:7387414882">7387414882</a><br><a href="tel:9545117258">9545117258</a></div>
+    <div class="contact-item"><div class="ci-icon">💬</div><h4>WhatsApp</h4><a href="https://wa.me/917387414882">Chat on WhatsApp</a></div>
+    <div class="contact-item"><div class="ci-icon">📍</div><h4>Our Shop</h4><span style="font-size:13px;color:var(--text);">Shop No.8, KK Mangalam Emerald, Baliraj Colony No.1, Nakhate Chowk, Rahatani, PCMC, Pune – 411017</span></div>
+    <div class="contact-item"><div class="ci-icon">⏰</div><h4>Working Hours</h4><span>Mon–Sun: 8 AM – 9 PM</span></div>
+  </div>
+</div>
+
+</div><!-- /page-pickup -->
+
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo">MAAY</div>
-        <p>Maharashtra's first dry cleaning brand. Professional, hygienic, eco-friendly laundry delivered to your doorstep.</p>
-        <div class="footer-social"><a href="#" class="social-btn">📘</a><a href="https://wa.me/917387414882" class="social-btn">💬</a></div>
+        <p>Maharashtra's first dry cleaning brand. Professional, hygienic, eco-friendly laundry delivered to your doorstep in Pune.<br><a href="https://maaydrycleaner.com" style="color:var(--blue);text-decoration:none;font-weight:600;">🌐 www.maaydrycleaner.com</a></p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">📘</a>
+          <a href="https://wa.me/917387414882" class="social-btn">💬</a>
+        </div>
       </div>
       <div class="footer-col">
         <h4>Pages</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="packages.html">Packages</a></li>
-          <li><a href="discounts.html">Discounts</a></li>
-          <li><a href="why-us.html">Why Us</a></li>
-          <li><a href="pickup.html">Book Pickup</a></li>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('pricing')">Pricing</a></li>
+          <li><a onclick="showPage('packages')">Packages</a></li>
+          <li><a onclick="showPage('discounts')">Discounts</a></li>
+          <li><a onclick="showPage('whyus')">Why Us</a></li>
+          <li><a onclick="showPage('pickup')">Book Pickup</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -253,17 +871,97 @@ footer{background:var(--text);color:white;padding:48px 5vw 24px;}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 MAAY Laundry & Dry Clean.</span>
-      <span>📍 Rahatani, PCMC, Pune – 411017</span>
+      <span>© 2025 MAAY Laundry &amp; Dry Clean. &nbsp;|&nbsp; Designed by <a href="https://www.pratiktorkad.in" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:600;">Pratik Torkad</a></span>
+      <span>📍 Shop No.8, KK Mangalam Emerald, Baliraj Colony No.1, Nakhate Chowk, Rahatani, PCMC, Pune – 411017</span>
     </div>
   </div>
 </footer>
+
+
 <script>
-function openMenu(){document.getElementById('mobileNav').classList.add('open');}
-function closeMenu(){document.getElementById('mobileNav').classList.remove('open');}
-window.addEventListener('scroll',()=>{document.getElementById('navbar').style.boxShadow=window.scrollY>20?'0 4px 24px rgba(26,155,215,0.15)':'0 2px 20px rgba(26,155,215,0.08)';});
-const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+// ---- SPA Page Switching ----
+const PAGES = ['home','pricing','packages','discounts','whyus','pickup'];
+
+function showPage(id) {
+  PAGES.forEach(p => {
+    document.getElementById('page-' + p).classList.remove('active');
+    const n = document.getElementById('nav-' + p);
+    if (n) n.classList.remove('active');
+  });
+  document.getElementById('page-' + id).classList.add('active');
+  const nav = document.getElementById('nav-' + id);
+  if (nav) nav.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Re-trigger scroll reveals for this page
+  setTimeout(() => {
+    document.querySelectorAll('#page-' + id + ' .reveal').forEach(el => {
+      el.classList.remove('visible');
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('visible')));
+    });
+  }, 80);
+}
+
+// ---- Mobile Nav ----
+function openMenu() { document.getElementById('mobileNav').classList.add('open'); }
+function closeMenu() { document.getElementById('mobileNav').classList.remove('open'); }
+
+// ---- Scroll Shadow ----
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').style.boxShadow =
+    window.scrollY > 20 ? '0 4px 24px rgba(26,155,215,0.15)' : '0 2px 20px rgba(26,155,215,0.08)';
+});
+
+// ---- Intersection Observer for .reveal ----
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ---- Pricing Tabs ----
+function switchTab(e, id) {
+  document.querySelectorAll('.pricing-table').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  e.target.classList.add('active');
+}
+
+// ---- Booking Form ----
+function submitBooking() {
+  const name    = document.getElementById('f-name').value.trim();
+  const phone   = document.getElementById('f-phone').value.trim();
+  const address = document.getElementById('f-address').value.trim();
+  const date    = document.getElementById('f-date').value;
+  const slot    = document.getElementById('f-slot').value;
+  const service = document.getElementById('f-service').value;
+  if (!name || !phone || !address || !date || !slot || !service) {
+    alert('Please fill in all required fields before submitting.'); return;
+  }
+  if (!/^\d{10}$/.test(phone)) {
+    alert('Please enter a valid 10-digit mobile number.'); return;
+  }
+  const promo = document.getElementById('f-promo').value.trim();
+  const notes = document.getElementById('f-notes').value.trim();
+  const msg = `*New MAAY Pickup Booking*%0A%0A` +
+    `%F0%9F%91%A4 Name: ${encodeURIComponent(name)}%0A` +
+    `%F0%9F%93%9E Phone: ${phone}%0A` +
+    `%F0%9F%93%8D Address: ${encodeURIComponent(address)}%0A` +
+    `%F0%9F%93%85 Date: ${date}%0A` +
+    `%E2%8F%B0 Slot: ${encodeURIComponent(slot)}%0A` +
+    `%F0%9F%A7%BA Service: ${encodeURIComponent(service)}` +
+    (promo ? `%0A%F0%9F%8F%B7%EF%B8%8F Promo: ${encodeURIComponent(promo)}` : '') +
+    (notes ? `%0A%F0%9F%93%9D Notes: ${encodeURIComponent(notes)}` : '');
+  const successEl = document.getElementById('successMsg');
+  successEl.style.display = 'block';
+  successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  window.open(`https://wa.me/917387414882?text=${msg}`, '_blank');
+}
+
+// ---- Init home reveals ----
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('#page-home .reveal').forEach(el => el.classList.add('visible'));
+  }, 200);
+});
 </script>
 </body>
 </html>
